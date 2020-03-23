@@ -13,24 +13,39 @@
             height: 100%;
         }
         @keyframes myfirst{
-            from {opacity: 0;}
-            to {opacity: 100;}
+            0% {opacity: 0}
+            15%{opacity: 100}
+            16%{opacity: 0}
+            100% {opacity: 0}
+        }
+        @keyframes mysecond{
+            0% {opacity: 0}
+            15%{opacity: 0}
+            20%{opacity: 100}
+            100% {opacity: 0}
         }
         p{
             font-size: 100px;
+            font-family: 楷体;
             position: absolute;
             width: 100%;
             text-align: center;
-            animation:myfirst 2s infinite;
+        }
+        #one{
+            animation: myfirst 125s infinite;
+        }
+        #two{
+            animation: mysecond 125s infinite;
         }
     </style>
 </head>
 <body>
-<audio src="wav/bgm.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio><h1>静夜思</h1>
-<p>忍不住化身一条固执的鱼，</p>
-<p>逆着洋流独自流到底。</p>
-<p>年少时候虔诚发过的誓，</p>
-<p>沉默的沉没在深海里。</p>
-
+<audio src="wav/bgm.wav" controls="controls" autoplay="autoplay" loop="loop"></audio>
+<p id="one">忍不住化身一条固执的鱼</p>
+<p id="two">逆着洋流独自流到底</p>
+<!--
+<p id="three">年少时候虔诚发过的誓</p>
+<p id="four">沉默的沉没在深海里</p>
+-->
 </body>
 </html>
